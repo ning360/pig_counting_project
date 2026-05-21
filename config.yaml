@@ -1,0 +1,33 @@
+# 检测配置
+detection:
+  model: "yolov8n.pt"
+  confidence: 0.5
+  iou_threshold: 0.5
+  denoise: true
+
+# 跟踪配置
+tracking:
+  max_iou_cost: 0.7
+  iou_weight: 0.6
+  motion_weight: 0.4
+  max_age: 30
+
+# 计数配置
+counting:
+  count_lines:
+    - start: [100, 300]
+      end: [800, 300]
+      direction: "up"
+  count_regions: []
+
+# 可视化配置
+visualization:
+  show_tracks: true
+  show_trajectories: true
+  show_counts: true
+
+# 性能配置
+performance:
+  use_gpu: true
+  frame_skip: 0
+  resize_factor: 1.0

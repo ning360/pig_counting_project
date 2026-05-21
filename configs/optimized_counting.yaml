@@ -1,0 +1,27 @@
+# 优化计数配置
+detection:
+  model: "C:/Users/34823/Desktop/pig_counting_project/pig_training/pig_detection_v1/weights/best.pt"
+  confidence: 0.3 # 降低置信度阈值，检测更多目标
+  iou_threshold: 0.4
+  image_size: 640
+  enhancement: true
+
+# 跟踪配置
+tracking:
+  max_age: 50 # 增加最大寿命
+  min_hits: 2 # 减少最小命中次数
+  iou_threshold: 0.3
+  use_kalman: true
+
+# 计数配置 - 根据实际视频调整计数线位置
+counting:
+  count_lines:
+    - start: [50, 400] # 调整计数线位置
+      end: [1200, 400] # 根据视频宽度调整
+      direction: "both"
+
+# 性能配置
+performance:
+  use_gpu: true
+  frame_skip: 0
+  resize_factor: 1.0

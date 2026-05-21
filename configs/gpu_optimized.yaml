@@ -1,0 +1,24 @@
+counting:
+  count_lines:
+  - direction: both
+    end:
+    - 800
+    - 300
+    start:
+    - 100
+    - 300
+detection:
+  confidence: 0.5
+  enhancement: true
+  image_size: 640
+  iou_threshold: 0.5
+  model: yolov8n.pt
+performance:
+  frame_skip: 0
+  resize_factor: 1.0
+  use_gpu: true
+tracking:
+  iou_threshold: 0.3
+  max_age: 30
+  min_hits: 3
+  use_kalman: true

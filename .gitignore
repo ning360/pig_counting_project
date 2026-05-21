@@ -1,0 +1,36 @@
+# 虚拟环境
+venv/
+venv310/
+env/
+ENV/
+.venv/
+pig_counting_env/
+
+# 模型权重
+*.pt
+*.pth
+*.weights
+*.onnx
+*.tflite
+
+# 数据和输出
+datasets/
+output/
+runs/
+weights/
+yolotrain/
+pig_final_training/
+pig_memory_safe/
+pig_training/
+pig_training_robust/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/

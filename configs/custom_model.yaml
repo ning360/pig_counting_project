@@ -1,0 +1,27 @@
+# 自定义训练模型配置
+detection:
+  model: "C:/Users/34823/Desktop/pig_counting_project/pig_training/pig_detection_v1/weights/best.pt"
+  confidence: 0.5
+  iou_threshold: 0.5
+  image_size: 640
+  enhancement: true
+
+# 跟踪配置
+tracking:
+  max_age: 30
+  min_hits: 3
+  iou_threshold: 0.3
+  use_kalman: true
+
+# 计数配置
+counting:
+  count_lines:
+    - start: [100, 300]
+      end: [800, 300]
+      direction: "both"
+
+# 性能配置
+performance:
+  use_gpu: true
+  frame_skip: 0
+  resize_factor: 1.0
